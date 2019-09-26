@@ -14,10 +14,10 @@ def reduce (array, start = 0)
   total = 0 
   new = 0 
   i = 0 
-  while i < array.length do
-    new = yield(array[i], total)
+  while start < array.length do
+    new = yield(array[start], total)
     total = new
-    i += 1 
+    start += 1 
   end
   return total
 end
