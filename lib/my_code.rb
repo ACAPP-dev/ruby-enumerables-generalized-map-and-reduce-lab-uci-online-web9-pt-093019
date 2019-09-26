@@ -12,12 +12,12 @@ end
 
 def reduce (array, start = 0)
   total = 0 
-  new = 0 
+  new = start 
   i = 0 
-  while start < array.length do
-    new = yield(array[start], total)
+  while i < array.length do
+    new = yield(array[i], total)
     total = new
-    start += 1 
+    i += 1 
   end
   return total
 end
