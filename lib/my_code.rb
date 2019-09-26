@@ -16,6 +16,9 @@ def reduce (array, start = 0)
   i = 0 
   while i < array.length do
     new = yield(array[i], total)
+    if new == false 
+      return false
+    end
     total = new
     i += 1 
   end
